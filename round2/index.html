@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muse Taste Lab</title>
+
+<script type="module">
+import init, * as bindings from './muse-deck-b366bbf0907f9069.js';
+const wasm = await init({ module_or_path: './muse-deck-1fb65c8074692c12_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #eceaf2; }
+  canvas { position: absolute; inset: 0; width: 100%; height: 100%; outline: none; }
+  #loading { position: absolute; inset: 0; display: grid; place-items: center; font: 600 18px -apple-system, Inter, system-ui, sans-serif; color: #6b6780; }
+</style>
+<link rel="modulepreload" href="./muse-deck-b366bbf0907f9069.js" crossorigin="anonymous" integrity="sha384-+O7IVM3UIa/ndwr0Xgm5FY5vcrl2ig2upN70/Hy9LpYOETtWiZgfXLENqNe+odXB"><link rel="preload" href="./muse-deck-1fb65c8074692c12_bg.wasm" crossorigin="anonymous" integrity="sha384-5Zi+B8KGzH3YOHCVY1gjAHm6ACuiTR6Gz2JN9SSnIhb7qryDgBagoikGEVDNppPL" as="fetch" type="application/wasm"></head>
+<body>
+  <canvas id="muse_canvas"></canvas>
+  <div id="loading">Loading Muse Taste Lab…</div>
+</body>
+</html>
