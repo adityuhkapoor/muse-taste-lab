@@ -6,8 +6,8 @@
 <title>Muse Taste Lab</title>
 
 <script type="module">
-import init, * as bindings from './muse-deck-740910cf9054c92b.js';
-const wasm = await init({ module_or_path: './muse-deck-70b231691fb67d00_bg.wasm' });
+import init, * as bindings from './muse-deck-ed081f59863755ba.js';
+const wasm = await init({ module_or_path: './muse-deck-4df0146555afbbd3_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -21,7 +21,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
   canvas { position: absolute; inset: 0; width: 100%; height: 100%; outline: none; }
   #loading { position: absolute; inset: 0; display: grid; place-items: center; font: 600 18px -apple-system, Inter, system-ui, sans-serif; color: #6b6780; }
 </style>
-<link rel="modulepreload" href="./muse-deck-740910cf9054c92b.js" crossorigin="anonymous" integrity="sha384-dcg1qWoTvWmex98tIXjdc+04UhnIW4LQkySYJgGz9h3V8oGLhZreY3w+/mPiPfiW"><link rel="preload" href="./muse-deck-70b231691fb67d00_bg.wasm" crossorigin="anonymous" integrity="sha384-mTu/9h0rFfrKchyDhulAdFWHIByq4IQ3midnj1ni5zGVPN8rM8/3uGoS1p3RdH7n" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="./muse-deck-ed081f59863755ba.js" crossorigin="anonymous" integrity="sha384-ViGaoCRDrdF1G1SQU1qPbHKi4qMYKWuUpUGHYUGIG/J48NL6NYbj29adeR95Bw4l"><link rel="preload" href="./muse-deck-4df0146555afbbd3_bg.wasm" crossorigin="anonymous" integrity="sha384-jFpF1ROz/13ufJtOYzz0MNzxIB6yr1kFIRGavQnN/Kk2kFJv6IiqQrAIGTmRR84d" as="fetch" type="application/wasm"></head>
 <body>
   <canvas id="muse_canvas"></canvas>
   <div id="loading">Loading Muse Taste Lab…</div>
