@@ -7,8 +7,8 @@
 <title>Muse Taste Lab</title>
 
 <script type="module">
-import init, * as bindings from './muse-deck-9f824a6deff02c7d.js';
-const wasm = await init({ module_or_path: './muse-deck-5de3b39ec87d797a_bg.wasm' });
+import init, * as bindings from './muse-deck-e97a5880751ec59b.js';
+const wasm = await init({ module_or_path: './muse-deck-ddfd043bbe19bfc1_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -30,7 +30,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
   //  - mid-session: reload at the next quiet moment (15s without input, or tab hidden)
   // Names, votes and unsent votes live in localStorage, so a reload loses nothing.
   (function () {
-    var BUILD = "5de3b39ec87d797a";
+    var BUILD = "ddfd043bbe19bfc1";
     var started = Date.now(), lastInput = Date.now(), pending = null;
     ["pointerdown", "pointermove", "keydown", "wheel", "touchstart"].forEach(function (e) {
       addEventListener(e, function () { lastInput = Date.now(); }, { passive: true });
@@ -59,7 +59,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     setInterval(check, 60000);
   })();
 </script>
-<link rel="modulepreload" href="./muse-deck-9f824a6deff02c7d.js" crossorigin="anonymous" integrity="sha384-I5vNpCp4qCToyZ8n/B2CBKNxaGVvz0DOApruwXXarYxxCEN9FUv+Zi0nxGueI7JN"><link rel="preload" href="./muse-deck-5de3b39ec87d797a_bg.wasm" crossorigin="anonymous" integrity="sha384-xoyy/56epImdDEI+p5K5zhQgNaIhcUVfwG76tNSg5StTjHE6fJFBhvFJNrx1QV8z" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="./muse-deck-e97a5880751ec59b.js" crossorigin="anonymous" integrity="sha384-cVWmLm4lEDMBxYy30xTpjfSPC+sjILQPBsQsmSEo47ifJsXqQvg4tyC+52WQrt0D"><link rel="preload" href="./muse-deck-ddfd043bbe19bfc1_bg.wasm" crossorigin="anonymous" integrity="sha384-kzQw01p3JUBhGcYlajwvH51mqUxAvnyWoDgXnne/gbejiJ8cKBNGXDo90/gHJsDb" as="fetch" type="application/wasm"></head>
 <body>
   <canvas id="muse_canvas"></canvas>
   <div id="loading">Loading Muse Taste Lab…</div>
